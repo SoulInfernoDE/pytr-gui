@@ -16,8 +16,67 @@ from pytr.account import login
 from pytr.portfolio import Portfolio
 from pytr.alarms import Alarms
 from pytr.details import Details
+from gooey import Gooey
 
+@Gooey(
+    program_name='PyTR GUI',
+    show_sidebar=True,
+    navigation='SIDEBAR',
+    sidebar_title='commands',
+    tabbed_groups=True,
+    menu=[{
+        'name': 'File',
+        'items': [{
+                'type': 'MessageDialog',
+                'menuTitle': 'Information',
+                'caption': 'My Message',
+                'message': 'I am demoing an informational dialog!'
+            }, {
+                'type': 'Link',
+                'menuTitle': 'Visit Our Site',
+                'url': 'https://github.com/marzzzello/pytr'
+            }]
+        },{
+        'name': 'Help',
+        'items': [{
+            'type': 'Link',
+            'menuTitle': 'Documentation',
+            'url': 'https://github.com/marzzzello/pytr'
+            }, {
+                'type': 'AboutDialog',
+                'menuTitle': 'About',
+                'name': 'PyTR GUI: Use Trade Republic in terminal',
+                'description': 'This is a library for the private API of the Trade Republic online brokerage. I am not affiliated with Trade Republic Bank GmbH',
+                'version': '0.1.5',
+                'copyright': '2020',
+                'website': 'https://pypi.org/project/pytr/',
+                'developer': 'https://github.com/marzzzello',
+                'license': '''MIT License
 
+Copyright (c) 2020 marzzzello
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+'''
+        }]
+    }]
+)
+             
 def get_main_parser():
     def formatter(prog):
         return argparse.HelpFormatter(prog, max_help_position=25)
