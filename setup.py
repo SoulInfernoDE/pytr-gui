@@ -43,7 +43,7 @@ setup(
         'colored>=1.3.93',
         'pygtrie>=2.3.3',
         're-wx>=0.0.2',
-        'typing-extensions==3.10.0.2',
+        'typing-extensions',
         'mypy-extensions==0.4.3',
         'Gooey',
     ],
