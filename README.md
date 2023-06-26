@@ -1,20 +1,20 @@
-# pytr: Use TradeRepublic in terminal
+# pyTR GUI: Use TradeRepublic in terminal with a gui
 
-This is a library for the private API of the Trade Republic online brokerage. I am not affiliated with Trade Republic Bank GmbH.
+This is a gui for the marzzzello's pytr app. I am not affiliated with Trade Republic Bank GmbH.
 
 ## Installation
 
-Install with `pip install pytr`
+Install with `pip3 install pytr`
 
 Or you can clone the repo like so:
 
 ```sh
-git clone https://github.com/marzzzello/pytr.git
-cd pytr
-pip install .
+git clone https://github.com/SoulInfernoDE/pytr-gui.git
+cd pytr-gui
+pip3 install .
 ```
 
-## Usage
+## Original pytr Usage
 
 ```
 $ pytr help
@@ -52,6 +52,17 @@ Options:
 
 ```
 
+## GUI Usage
+
+```
+$ pytr
+
+starts pytr with Gooey gui
+```
+
+same as cli usage but it's a little bit visual...
+
+
 ## Authentication
 
 There are two authentication methods:
@@ -64,10 +75,7 @@ Web login is the newer method that uses the same login method as [app.traderepub
 App login is the older method that uses the same login method as the TradeRepublic app.
 First you need to perform a device reset - a private key will be generated that pins your "device". The private key is saved to your keyfile. This procedure will log you out from your mobile device.
 
-```sh
-$ pytr login
-$ # or
-$ pytr login --phone_no +49123456789 --pin 1234
-```
 
-If no arguments are supplied pytr will look for them in the file `~/.pytr/credentials` (the first line must contain the phone number, the second line the pin). If the file doesn't exist pytr will ask for for the phone number and pin.
+pytr will look for them in the file `~/.pytr/credentials` (the first line must contain the phone number, the second line the pin). If the file doesn't exist pytr will ask for for the phone number and pin.
+
+All credits for the pytr app goes to @marzzzello i only did some gui additions and renamed some lines to pyTR GUI so that it is visible that it is an modified main.py
