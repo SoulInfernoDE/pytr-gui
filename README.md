@@ -1,4 +1,4 @@
-# pyTR GUI: Use TradeRepublic in terminal with a gui
+# pyTR GUI: Use TradeRepublic in terminal with a gui (deprecated: i will not continue to work on this anymore due to several otehr projects and real life workload)
 
 This is a gui for the marzzzello's pytr app. I am not affiliated with Trade Republic Bank GmbH.
 
